@@ -1,35 +1,23 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import { vouchers } from "tally-to-xml-tdl";
+import cleanTallyResponse from "tally-clean-response";
+import select from "select-json-by-json";
 
-import { executeXml } from "../../core/index.js";
-import { buildXml } from "../../core/buildXml.js";
-import infoJson from "./info.json" with {type: "json"};
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const body = fs.readFileSync(path.join(__dirname, "..", "..", "body.xml"), "utf8");
+import infoJson from "./select.json" with {type: "json"};
 
 const period = async (company, fromDate, ToDate) => {
-    const staticVariables = `<SVCURRENTCOMPANY>${company}</SVCURRENTCOMPANY>
-    <SVFROMDATE TYPE="Date">${fromDate}</SVFROMDATE><SVTODATE TYPE="Date">${ToDate}</SVTODATE>`;
+    const jsonToReturn = await vouchers.purchases.period(company, fromDate, ToDate);
+    const cleaned = cleanTallyResponse(jsonToReturn);
+    const selected = select(cleaned, infoJson);
 
-    const xml = buildXml(body, {
-        staticVariables,
-        ...infoJson
-    });
-
-    return await executeXml(xml);
+    return await selected;
 };
 
 const all = async (company) => {
-    const staticVariables = `<SVCURRENTCOMPANY>${company}</SVCURRENTCOMPANY>`;
+    const jsonToReturn = await vouchers.purchases.all(company);
+    const cleaned = cleanTallyResponse(jsonToReturn);
+    const selected = select(cleaned, infoJson);
 
-    const xml = buildXml(body, {
-        staticVariables,
-        ...infoJson
-    });
-
-    return await executeXml(xml);
+    return await selected;
 };
 
 export { period, all };

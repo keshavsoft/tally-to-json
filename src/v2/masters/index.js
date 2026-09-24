@@ -1,25 +1,11 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import { masters } from "tally-to-xml-tdl";
+import cleanTallyResponse from "tally-clean-response";
 
-import { executeXml } from "../core/index.js";
-import { buildXml } from "../core/buildXml.js";
-import bodyJson from "./masters.json" with {type: "json"};
+const get = async (company, jsonId) => {
+    const jsonToReturn = await masters.get(company, jsonId);
+    const cleaned = cleanTallyResponse(jsonToReturn);
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const body = fs.readFileSync(path.join(__dirname, "..", "body.xml"), "utf8");
-
-const get = (company, jsonId) => {
-    const { tdlMessage } = bodyJson[jsonId];
-
-    const staticVariables = `<SVCURRENTCOMPANY>${company}</SVCURRENTCOMPANY>`;
-
-    const xml = buildXml(body, {
-        staticVariables,
-        tdlMessage
-    });
-
-    return executeXml(xml);
+    return await cleaned;
 };
 
 export { get };
