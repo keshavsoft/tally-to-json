@@ -1,7 +1,7 @@
 import { vouchers } from "tally-to-xml-tdl";
 import cleanTallyResponse from "tally-clean-response";
 import select from "select-json-by-json";
-import norm from "../../../../norm/v2/index.js";
+import norm from "../../../../norm/v3/index.js";
 
 import infoJson from "./select.json" with {type: "json"};
 import nomalizeJson from "./nomalize.json" with {type: "json"};
