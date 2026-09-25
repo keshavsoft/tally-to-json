@@ -10,11 +10,15 @@ const versionFolders = readdirSync(__dirname, { withFileTypes: true })
     .map(entry => ({ name: entry.name, n: Number(entry.name.slice(1)) }))
     .sort((a, b) => b.n - a.n);
 
-const latestVersion = versionFolders[0]?.name || "v2";
+const latestVersion = versionFolders[0]?.name || "v4";
 
 let company;
 let masters;
 let vouchers;
+let asIs;
+let cleaned;
+let selected;
+let normalized;
 
 const versionIndexPath = resolve(__dirname, latestVersion, "index.js");
 
@@ -23,6 +27,10 @@ if (existsSync(versionIndexPath)) {
     company = versionModule.company ?? versionModule.default;
     masters = versionModule.masters;
     vouchers = versionModule.vouchers;
+    asIs = versionModule.asIs;
+    cleaned = versionModule.cleaned;
+    selected = versionModule.selected;
+    normalized = versionModule.normalized;
 } else {
     const mainUrl = pathToFileURL(resolve(__dirname, latestVersion, "main.js")).href;
     const mastersUrl = pathToFileURL(resolve(__dirname, latestVersion, "masters", "index.js")).href;
@@ -39,5 +47,14 @@ if (existsSync(versionIndexPath)) {
     vouchers = vouchersModule;
 }
 
-export { company, masters, vouchers, latestVersion as version };
+export {
+    company,
+    masters,
+    vouchers,
+    asIs,
+    cleaned,
+    selected,
+    normalized,
+    latestVersion as version
+};
 export default company;
