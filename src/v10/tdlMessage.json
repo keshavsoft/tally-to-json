@@ -1,0 +1,17 @@
+{
+  "company": "<TYPE>Company</TYPE><FETCH>$$Alias:Name</FETCH>",
+  "vouchers": {
+    "purchases": "<TYPE>Vouchers:VoucherType</TYPE><CHILDOF>$$$$VchTypePurchase</CHILDOF><BELONGSTO>Yes</BELONGSTO><FETCH>AllInventoryEntries</FETCH><FETCH>Date</FETCH>",
+    "sales": "<TYPE>Vouchers:VoucherType</TYPE><CHILDOF>$$$$VchTypeSales</CHILDOF><BELONGSTO>Yes</BELONGSTO><FETCH>AllInventoryEntries</FETCH><FETCH>Date</FETCH>"
+  },
+  "masters": {
+    "uom": "<TYPE>Unit</TYPE><FETCH>$$Alias:Name</FETCH>",
+    "stockItems": "<TYPE>StockItem</TYPE><FETCH>$$Alias:Name</FETCH>",
+    "stockItemsWithBaseUnits": "<TYPE>StockItem</TYPE><FETCH>$$Alias:Name</FETCH><FETCH>BaseUnits</FETCH>",
+    "ledgerNames": "<TYPE>Ledger</TYPE><FETCH>$$Alias:Name</FETCH>",
+    "ledgerNamesWithDetails": "<TYPE>Ledger</TYPE><FETCH>$$Alias:Name</FETCH><FETCH>GSTRegistrationType</FETCH><FETCH>GSTIN</FETCH>",
+    "ledgerNamesMoreDetails": "<TYPE>Ledger</TYPE><FETCH>$$Alias:Name</FETCH><FETCH>LEDGSTREGDETAILS.LIST</FETCH>",
+    "stockGroups": "<TYPE>StockGroup</TYPE><FETCH>$$Alias:Name</FETCH>",
+    "stockGroupsAndParent": "<TYPE>StockGroup</TYPE><FETCH>$$Alias:Name</FETCH><FETCH>Parent</FETCH>"
+  }
+}
