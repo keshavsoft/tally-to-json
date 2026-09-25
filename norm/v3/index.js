@@ -1,5 +1,5 @@
-import normalize from "./normalize.js";
-import validate from "./validate.js";
+import normalize from "./normalize/index.js";
+import validate from "./validate/index.js";
 
 export { normalize, validate };
 
