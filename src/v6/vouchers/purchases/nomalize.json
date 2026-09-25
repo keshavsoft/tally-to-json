@@ -1,9 +1,0 @@
-{
-    "VOUCHERNUMBER": "number",
-    "ALLINVENTORYENTRIES.LIST": {
-        "$type": "array",
-        "BATCHALLOCATIONS.LIST": {
-            "$type": "array"
-        }
-    }
-}
