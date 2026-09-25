@@ -1,0 +1,18 @@
+{
+    "DATE": "date",
+    "VOUCHERTYPENAME": "voucherType",
+    "VOUCHERNUMBER": "voucherNumber",
+    "REFERENCE": "reference",
+    "MASTERID": "masterId",
+    "ALLINVENTORYENTRIES.LIST": "inventoryEntries",
+    "STOCKITEMNAME": "stockItemName",
+    "RATE": "rate",
+    "AMOUNT": "amount",
+    "ACTUALQTY": "actualQty",
+    "BILLEDQTY": "billedQty",
+    "BATCHALLOCATIONS.LIST": "batchAllocations",
+    "MFDON": "mfdOn",
+    "GODOWNNAME": "godownName",
+    "BATCHNAME": "batchName",
+    "DESTINATIONGODOWNNAME": "destinationGodownName"
+}
