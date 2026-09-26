@@ -1,6 +1,6 @@
 {
   "name": "tally-to-json",
-  "version": "1.12.2",
+  "version": "1.12.3",
   "description": "Simple, clean TDL and XML extraction and manipulation tools for Tally",
   "type": "module",
   "main": "src/index.js",
