@@ -1,0 +1,10 @@
+{
+    "voucherNumber": "number",
+    "masterId": "number",
+    "inventoryEntries": [
+        {
+            "amount": "number",
+            "batchAllocations": "array"
+        }
+    ]
+}

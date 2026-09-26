@@ -1,0 +1,26 @@
+{
+    "DATE": "date",
+    "VOUCHERTYPENAME": "voucherType",
+    "VOUCHERNUMBER": "voucherNumber",
+    "REFERENCE": "reference",
+    "MASTERID": "masterId",
+    "ALLINVENTORYENTRIES.LIST": {
+        "$as": "inventoryEntries",
+        "STOCKITEMNAME": "stockItemName",
+        "RATE": "rate",
+        "AMOUNT": "amount",
+        "ACTUALQTY": "actualQty",
+        "BILLEDQTY": "billedQty",
+        "BATCHALLOCATIONS.LIST": {
+            "$as": "batchAllocations",
+            "MFDON": "mfdOn",
+            "GODOWNNAME": "godownName",
+            "BATCHNAME": "batchName",
+            "DESTINATIONGODOWNNAME": "destinationGodownName",
+            "ACTUALQTY": "actualQty",
+            "BILLEDQTY": "billedQty",
+            "RATE": "rate",
+            "AMOUNT": "amount"
+        }
+    }
+}
