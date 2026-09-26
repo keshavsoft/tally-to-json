@@ -1,6 +1,6 @@
 {
   "name": "tally-to-json",
-  "version": "1.12.3",
+  "version": "1.12.5",
   "description": "Simple, clean TDL and XML extraction and manipulation tools for Tally",
   "type": "module",
   "main": "src/index.js",
@@ -32,13 +32,13 @@
     "rename-json-keys": "^1.1.3",
     "select-json-by-json": "^1.3.1",
     "tally-clean-response": "^1.2.1",
-    "tally-xml-tdl": "^1.21.3"
+    "tally-xml-tdl": "^1.22.3"
   },
   "dependencies1": {
     "normalize-json-by-json": "1.1.3",
     "rename-json-keys": "^1.1.3",
     "select-json-by-json": "^1.3.1",
     "tally-clean-response": "^1.2.1",
-    "tally-xml-tdl": "^1.21.3"
+    "tally-xml-tdl": "^1.22.4"
   }
 }

@@ -2,6 +2,8 @@
     "DATE": true,
     "VOUCHERTYPENAME": true,
     "VOUCHERNUMBER": true,
+    "PARTYLEDGERNAME": true,
+    "AMOUNT": true,
     "REFERENCE": true,
     "MASTERID": true,
     "ALLINVENTORYENTRIES.LIST": {
